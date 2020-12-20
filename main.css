@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    background-image: url("images/forest.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-image: url("images/ocean.jpg");
+    background-size: cover;
+}
+/*******Header*******/
+header{
+    height: 400px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.logo{
+    font-size: 2rem;
+}
+.logo .span{
+    border: 2px solid #a7ff83;
+    padding: 0 10px;
+}
+.live{
+    border: none;
+    color: red;
+}
+header ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    padding: 0 20px;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.active{
+    color: #a7ff83;
+}
+a:hover{
+    border-bottom: 3px solid #a7ff83;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 320px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.introduction h2{
+    margin-bottom: 10px;
+}
+p{
+    font-size: 1.4;
+}
+/******* main section *******/
+main{
+    padding: 20px;
+    height: max-content;
+    background-color: rgba(255, 255, 255, 1);
+}
+.gallery{
+    position: relative;
+    column-count: 3;
+}
+
+img{
+   width: 100%;
+   height: auto;
+   margin-bottom: 5px;
+   transition: 1s ease;
+}
+
+img:hover{
+    transform: scale(1.02);
+}
