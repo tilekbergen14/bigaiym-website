@@ -22,7 +22,7 @@ body{
 }
 /*********utilities*********/
 .navbar{
-    height: 80px;
+    height: max-content;
 }
 .nav{
     display: flex;
@@ -32,12 +32,13 @@ body{
 header{
     background-image: url("images/header.jpg");
     background-size: cover;
-    height: 400px;
+    height: max-content;
 }
 nav{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    align-items: center;
 }
 .logo{
     font-size: 2rem;
@@ -53,6 +54,7 @@ nav{
 header ul{
     list-style: none;
     display: flex;
+    align-items: center;
 }
 ul li{
     padding: 0 20px;
@@ -63,9 +65,7 @@ a{
     font-size: 1.2rem;
     font-weight: bold;
 }
-.active{
-    color: #a7ff83;
-}
+
 ul a:hover{
     border-bottom: 3px solid #a7ff83;
 }
@@ -73,16 +73,18 @@ ul a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 320px;
+    height: min-content;
     text-align: center;
     width: 80%;
     margin: 0 auto;
+    padding: 50px 0;
 }
 .glass{
     background-color: rgba(34, 209, 238, 0.05);
     padding: 5px 5px 15px 5px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
 }
@@ -90,7 +92,44 @@ ul a:hover{
     margin-bottom: 10px;
 }
 p{
-    font-size: 1.4;
+    font-size: 1.4rem;
+}
+.hamburger{
+    font-size: 30px;
+    display: none !important;
+    cursor: pointer;
+}
+.logo-ham{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.show{
+    display: flex !important;
+}
+@media screen and (max-width: 992px){
+    .container{
+        width: 100%;
+    }
+    .hamburger{
+        display: inline !important;
+    }
+    nav{
+        flex-direction: column;
+        align-items: inherit;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    .introduction{
+        width: 90%;  
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    .introduction{
+        padding: 20px 0;
+    }
 }
 /******* main section *******/
 main{
@@ -117,6 +156,11 @@ img:hover{
 h2 a{
     color: #a7ff83;
 }
+@media screen and (max-width: 992px){
+    .gallery{
+        column-count: 2;
+    }
+}
 /******* footer *******/
 footer{
     background-image: url("images/header.jpg");
@@ -133,10 +177,11 @@ footer{
 
 /******info page*****/
 .info-main{
-    height: 570px;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .box{
     flex: 1;
@@ -167,4 +212,10 @@ footer{
     height: 150px;
     width: 150px;
     border-radius: 50%;
+}
+@media screen and (max-width: 992px){
+    .info-main{
+        flex-direction: column;
+        height: max-content;
+    }
 }
